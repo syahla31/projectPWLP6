@@ -23,3 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('mahasiswas', MahasiswaController::class);
+//Route search
+Route::get('/search', [MahasiswaController::class, 'search'])->name('search');
