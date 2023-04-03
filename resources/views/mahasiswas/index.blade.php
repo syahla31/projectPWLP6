@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
-        <div class="pull-left mt-2">
+        <div class="pull-left mt-2"><br>
             <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
         </div><br>
 
@@ -22,7 +22,7 @@
     <p>{{ $message }}</p>
 </div>
 @endif
-
+<br>
 <table class="table table-bordered">
     <tr>
         <th>Nim</th>
