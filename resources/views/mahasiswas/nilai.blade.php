@@ -13,6 +13,7 @@
                 <li class="list-group-item"><b>Nim: </b>{{$Mahasiswa->Nim}}</li>
                 <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->kelas->nama_kelas}}</li>
                 <li class="list-group-item"><b>Jurusan: </b>{{$Mahasiswa->Jurusan}}</li>
+                <hr>
             </ul>
             <div class="col-lg-12 margin-tb">
                 <table class="table-responsive">
@@ -31,7 +32,9 @@
                             <td>{{ $MahasiswaMataKuliah->nilai }}</td>
                         </tr>
                         @endforeach
-                    </table>
+                    </table><br>
+                    <center><a class="btn btn-success btn-lg" href="{{ route('cetak_pdf',$Mahasiswa->Nim) }}">Cetak ke PDF</a></center>
+                    <br>
                 </table>
             </div>
         </div>

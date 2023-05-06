@@ -4,14 +4,14 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left mt-2"><br>
-            <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
+            <center><h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2></center>
         </div><br>
 
             <form class="form-left my-2" method="get" action="{{ route('search') }}">
                     <div class="form-group w-70 mb-3">
                         <input type="text" name="search" class="form-control w-50 d-inline" id="search" placeholder="Masukkan Nama">
                         <button type="submit" class="btn btn-primary mb-1">Cari</button>
-                        <a class="btn btn-success right" href="{{ route('mahasiswas.create') }}" style="margin-left:9.6cm"> Input Mahasiswa</a>
+                        <a class="btn btn-success right" href="{{ route('mahasiswas.create') }}" style="margin-left:9.6cm">Input Mahasiswa</a>
                     </div>
             </form>
     </div>
@@ -27,11 +27,9 @@
     <tr>
         <th>Nim</th>
         <th>Nama</th>
+        <th>Foto</th>
         <th>Kelas</th>
         <th>Jurusan</th>
-        <th>No_Handphone</th>
-        <th>Email</th>
-        <th>TTL</th>
         <th width="300px">Action</th>
     </tr>
     @foreach ($mahasiswas as $Mahasiswa)
@@ -39,11 +37,9 @@
 
         <td>{{ $Mahasiswa->Nim }}</td>
         <td>{{ $Mahasiswa->Nama }}</td>
+        <td><img width="100px" src="{{asset('storage/'.$Mahasiswa->Foto)}}"></td>
         <td>{{ $Mahasiswa->kelas->nama_kelas }}</td>
         <td>{{ $Mahasiswa->Jurusan }}</td>
-        <td>{{ $Mahasiswa->No_Handphone }}</td>
-        <td>{{ $Mahasiswa->Email }}</td>
-        <td>{{ $Mahasiswa->Tanggal_lahir }}</td>
         <td>
             <form action="{{ route('mahasiswas.destroy',$Mahasiswa->Nim) }}" method="POST">
 
